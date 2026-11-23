@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Find Your Equal Country</title>
+<meta name="description" content="Tap or search any place on a world map of 195 new countries that each earn about the same in a year, and see which one you would live in.">
+<link rel="stylesheet" href="viewer/leaflet/leaflet.css">
+<link rel="stylesheet" href="viewer/style.css">
+</head>
+<body>
+<header class="bar">
+  <h1>Which of the 195 equal countries would you live in?</h1>
+  <div class="row">
+    <div class="search">
+      <label class="sr" for="q">Search a city</label>
+      <input id="q" type="search" placeholder="Search a city" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-controls="results" aria-autocomplete="list">
+      <ul id="results" class="results" role="listbox" hidden></ul>
+    </div>
+    <button id="locate" class="btn icon" type="button" title="Where I am" aria-label="Where I am" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button id="info" class="btn icon" type="button" title="What is this?" aria-label="What is this?" aria-controls="about">?</button>
+  </div>
+  <p id="hint" class="hint">Tap the map, search a city, or use where you are.</p>
+</header>
+
+<main id="map" aria-label="Map of the 195 equal countries"></main>
+
+<div id="status" class="status" role="status">Loading the map (about 3 MB)...</div>
+
+<label class="toggle"><input id="today" type="checkbox" checked> today's borders</label>
+
+<section id="card" class="card" aria-live="polite" hidden>
+  <button id="cardClose" class="btn close" type="button" aria-label="Close">&times;</button>
+  <div id="cardBody"></div>
+</section>
+
+<section id="about" class="about" hidden aria-labelledby="aboutTitle">
+  <div class="aboutInner">
+    <button id="aboutClose" class="btn close" type="button" aria-label="Close">&times;</button>
+    <h2 id="aboutTitle">What is this?</h2>
+    <p>In 2024 the world earned about $112 trillion. We cut that into 195 equal shares of about $575 billion and drew
+      one new country around each share. The lines follow real district borders (with a few straight cuts), not today's countries.</p>
+    <p id="videoLine"></p>
+    <h3>Limits</h3>
+    <ul>
+      <li>Equal within limits: each country earns between 0.94 and 1.04 of a share.</li>
+      <li>The number of people is an estimate from gridded data.</li>
+      <li>This page draws a simplified map. Near a line it can be a few km off. The full data is in the zip below.</li>
+      <li>The line across Manhattan is an estimate from payroll data, not GDP. It runs along 45th Street; other
+        readings put it anywhere from 38th to 45th Street.</li>
+      <li>Names are working names, mostly the biggest city inside. They are not proposals.</li>
+      <li>Lines follow the district files used; they take no position on any border dispute.</li>
+    </ul>
+    <h3>Your location</h3>
+    <p>"Where I am" asks your browser for your location and uses it only inside this page. It is not sent anywhere.
+      This page loads nothing from other sites and sets no cookies.</p>
+    <h3>Data</h3>
+    <ul>
+      <li><a href="equal-world-195-countries.geojson.zip">Full data (zip, 12 MB)</a></li>
+      <li><a href="equal-world-195-countries-small.geojson">Simplified map used here (GeoJSON, 2.8 MB)</a></li>
+      <li><a href="README.txt">README: fields, method and limits</a></li>
+      <li><a href="https://github.com/hemplover/equal-world-map">All files on GitHub</a></li>
+    </ul>
+    <h3>Credits and licences</h3>
+    <ul class="credits">
+      <li>Contains information from OpenStreetMap and other sources via geoBoundaries, made available under the
+        <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a>.
+        <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap contributors</a>.</li>
+      <li>District borders: <a href="https://www.geoboundaries.org">geoBoundaries</a> (Runfola et al. 2020) and each
+        country's source; US counties: US Census Bureau.</li>
+      <li>Coasts, national lines and the "today's borders" layer: <a href="https://www.naturalearthdata.com">Natural Earth</a> (public domain).</li>
+      <li>Money and people: Kummu et al. 2025, gridded GDP and population,
+        <a href="https://doi.org/10.5281/zenodo.18429133">CC BY 4.0</a>; national totals: IMF World Economic Outlook 2024.</li>
+      <li>City search: <a href="https://www.geonames.org">GeoNames</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (cities over 15,000 people, cut down to name, place and size).</li>
+      <li>Map drawing: <a href="https://leafletjs.com">Leaflet</a> 1.9.4 (<a href="viewer/leaflet/LICENSE">BSD-2-Clause</a>).</li>
+      <li>Full sources and licences: <a href="LICENSE.txt">LICENSE.txt</a> and <a href="sources-by-country.csv">sources-by-country.csv</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<script src="viewer/leaflet/leaflet.js"></script>
+<script src="viewer/lookup.js"></script>
+<script src="viewer/app.js"></script>
+</body>
+</html>

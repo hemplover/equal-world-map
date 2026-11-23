@@ -1,6 +1,8 @@
 EQUAL WORLD MAP: 195 COUNTRIES THAT EACH MAKE THE SAME MONEY
 From the Nils Explains video "I Redrew the World So Every Country Makes the Same Money"
 Video: <VIDEO LINK>
+Look at the map: https://hemplover.github.io/equal-world-map/
+That page lets you tap or search any place and see which of the 195 new countries it would be in.
 
 FILES
 - equal-world-195-countries.geojson.zip   The full database (195 features, full-detail geometry, as used for the
@@ -12,6 +14,14 @@ FILES
                                           gaps (a few km2) can appear along shared lines. Use the zip for any work.
 - README.txt, LICENSE.txt                 This file and the licence statement.
 - sources-by-country.csv                  Source and licence of the district lines, per today's country.
+- index.html, .nojekyll, viewer/          The map page (plain HTML, CSS and JavaScript, no build step; it loads
+                                          nothing from other sites). viewer/ holds: app.js (the page), lookup.js
+                                          (which region holds a point), style.css, leaflet/ (Leaflet 1.9.4 and its
+                                          BSD-2-Clause licence), borders.json (today's borders: Natural Earth 1:50m
+                                          boundary lines, public domain), cities.txt (city search: GeoNames
+                                          cities15000, CC BY 4.0, cut down), labels.json (label positions),
+                                          new-york-detail.json (full-detail outline of the New York region, from
+                                          the zip, so the Manhattan line is exact on the page).
 Coordinates: longitude/latitude, WGS 84 (EPSG:4326).
 
 WHAT ONE FEATURE IS
