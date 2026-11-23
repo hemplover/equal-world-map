@@ -1,0 +1,46 @@
+LICENCE STATEMENT: EQUAL WORLD MAP (195 COUNTRIES), by Nils Explains
+
+1. THE DATABASE AS A WHOLE: Open Database License 1.0 (ODbL)
+   "Equal World Map (195 countries)" (equal-world-195-countries.geojson and its simplified copy
+   equal-world-195-countries-small.geojson) is made available under the Open Database License 1.0:
+   https://opendatacommons.org/licenses/odbl/1-0/
+   It is a Derivative Database of ODbL data (district lines of 39 countries, mostly from OpenStreetMap, via
+   geoBoundaries), so under ODbL section 4.4 it is offered only under the ODbL.
+
+   ODbL notice (sections 4.2 and 4.3):
+   Contains information from OpenStreetMap and other sources via geoBoundaries, which is made available here under
+   the Open Database License (ODbL): https://opendatacommons.org/licenses/odbl/1-0/
+   (c) OpenStreetMap contributors, https://www.openstreetmap.org/copyright
+
+2. PARTS ADAPTED FROM CC BY-SA SOURCES
+   The district lines of 13 countries come from sources under Creative Commons Attribution-ShareAlike:
+   - CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/legalcode): Japan, Taiwan, Kosovo, Togo
+     (OpenStreetMap, Wambacher); Saudi Arabia (geoBoundaries, OpenStreetMap); Croatia (OpenStreetMap,
+     geoBoundaries); Austria (Federal Office for Metrology and Survey, Austria).
+   - CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/legalcode): Azerbaijan (Wikipedia);
+     Cyprus and Northern Cyprus (Wikipedia, Cyprus Department of Land Registry and Geometry); Kyrgyzstan (Wikipedia,
+     Districts of Kyrgyzstan); Turkmenistan (CIESIN); Uruguay (Wikimedia Commons).
+   Those lines were adapted (merged with other districts into new regions, then simplified in the small copy). The
+   regions that contain them carry "CC BY-SA 2.0" or "CC BY-SA 3.0" in the field sharealike_sources. For those
+   adapted parts, the terms of the CC BY-SA licence named (credit to the source; adaptations shared under the same
+   licence) apply as well, and nothing in this statement restricts them.
+   Twelve regions contain lines from both ODbL and CC BY-SA sources: Lagos, Tel Aviv, Ar Riyad, Dammam, Athens,
+   Ankara, Baghdad, Tehran, Vienna, Budapest, Kabul, Urumqi. Neither licence text names the other as compatible; we
+   label these regions with both and are not sure this fully settles both licences (see the note at the end).
+
+3. OTHER SOURCES (attribution; no share-alike)
+   - geoBoundaries (Runfola et al. 2020), https://www.geoboundaries.org , CC BY 4.0 and the per-country licences
+     in sources-by-country.csv.
+   - US Census Bureau: cartographic boundary counties 2023, ZCTA 2020, TIGER 2023, ZIP Code Business Patterns 2023,
+     LEHD LODES 2022 (public domain).
+   - Natural Earth, https://www.naturalearthdata.com (public domain).
+   - Kummu et al. 2025, gridded GDP and population, CC BY 4.0, https://doi.org/10.5281/zenodo.18429133
+   - IMF World Economic Outlook 2024; official local GDP from BEA, Tokyo Metropolitan Government, Eurostat / INSEE,
+     ONS, CSO Ireland, Statistik Stadt Zurich, Bayerisches Landesamt fur Statistik, Seoul, Shanghai and Beijing
+     statistics offices.
+   - Per-country source and licence of every district file: sources-by-country.csv.
+
+4. NO WARRANTY. The data is provided "as is", without warranty of any kind (see the licences above).
+
+NOTE: we are not lawyers. This statement is our good-faith reading of the licence texts, not legal advice. If you
+hold rights in one of the sources and see a problem, please tell us in the comments of the video.
